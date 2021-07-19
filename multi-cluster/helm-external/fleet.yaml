@@ -7,7 +7,6 @@ targetCustomizations:
     values:
       replication: false
       replicas: 1
-      serviceType: LoadBalancer
   clusterSelector:
     matchLabels:
       fleet.cattle.io/cluster: cluster-530bc8b88b86

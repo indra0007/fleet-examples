@@ -4,16 +4,19 @@ helm:
 targetCustomizations:
 - name: cluster1
   helm:
-    valuesFiles:
-      - values1.yaml
+    values:
+      replication: false
+      replicas: 1
+      serviceType: LoadBalancer
   clusterSelector:
     matchLabels:
       fleet.cattle.io/cluster: cluster-530bc8b88b86
 
 - name: cluster2
   helm:
-    valuesFiles:
-      - values2.yaml
+    values:
+      replication: false
+      replicas: 1
   clusterSelector:
     matchLabels:
       fleet.cattle.io/cluster: cluster-e47eeb993182

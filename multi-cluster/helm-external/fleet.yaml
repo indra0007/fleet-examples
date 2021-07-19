@@ -8,7 +8,7 @@ targetCustomizations:
     #   replication: false
     #   replicas: 2
     valuesFiles:
-      - values1.yaml
+      - ./values1.yaml
   clusterSelector:
     matchLabels:
       fleet.cattle.io/cluster: cluster-530bc8b88b86
@@ -19,7 +19,7 @@ targetCustomizations:
     #   replication: false
     #   replicas: 1
     valuesFiles:
-      - values2.yaml
+      - ./values2.yaml
   clusterSelector:
     matchLabels:
       fleet.cattle.io/cluster: cluster-e47eeb993182

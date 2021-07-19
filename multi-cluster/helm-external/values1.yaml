@@ -1,3 +1,2 @@
 replication: false
-replicas: 1
-serviceType: LoadBalancer
+replicas: 2

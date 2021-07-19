@@ -4,10 +4,6 @@ helm:
 targetCustomizations:
 - name: cluster1
   helm:
-    # values:
-    #   replication: false
-    #   replicas: 2
-    valuesFiles:
       - ./values1.yaml
   clusterSelector:
     matchLabels:
@@ -15,9 +11,6 @@ targetCustomizations:
 
 - name: cluster2
   helm:
-    # values:
-    #   replication: false
-    #   replicas: 1
     valuesFiles:
       - ./values2.yaml
   clusterSelector:

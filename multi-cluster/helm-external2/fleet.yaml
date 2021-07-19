@@ -1,4 +1,4 @@
-namespace: kube-system
+defaultNamespace: kube-system
 helm:
   chart: aws-calico
   repo: https://aws.github.io/eks-charts

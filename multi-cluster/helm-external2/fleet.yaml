@@ -16,3 +16,14 @@ targetCustomizations:
   clusterSelector:
     matchLabels:
       management.cattle.io/cluster-display-name: global-platform-pilot-non-prod
+- name: values-tbd
+  helm:
+    chart: ingress-nginx
+    repo: https://kubernetes.github.io/ingress-nginx
+    releaseName: ingress-nginx
+    version: 3.7.1
+    valuesFiles:
+      - values-tbd.yaml
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: values-tbd.yaml

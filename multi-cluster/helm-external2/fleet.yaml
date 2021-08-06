@@ -1,9 +1,15 @@
-defaultNamespace: kube-system
+defaultNamespace: default
 helm:
-  chart: aws-calico
-  repo: https://aws.github.io/eks-charts
-  releaseName: calico
-  version: 0.3.4
-
-
-
+  chart: ingress-nginx
+  repo: https://kubernetes.github.io/ingress-nginx
+  releaseName: ingress-nginx
+  version: 3.7.1
+targetCustomizations:
+- name: global-platform-pilot-non-prod
+  helm:
+    version: 3.7.1
+    valuesFiles:
+      - values-global-platform-pilot-non-prod.yaml
+  clusterSelector:
+    matchLabels:
+      management.cattle.io/cluster-display-name: global-platform-pilot-non-prod

@@ -7,7 +7,7 @@ helm:
 targetCustomizations:
 - name: global-platform-pilot-non-prod
   helm:
-    version: 3.7.1
+    version: 3.7.0
     valuesFiles:
       - values-global-platform-pilot-non-prod.yaml
   clusterSelector:

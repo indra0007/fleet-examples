@@ -3,6 +3,7 @@ helm:
   chart: ingress-nginx
   repo: https://kubernetes.github.io/ingress-nginx
   releaseName: ingress-nginx
+  version: 3.7.1
 targetCustomizations:
 - name: global-platform-pilot-non-prod
   helm:
